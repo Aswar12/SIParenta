@@ -1,0 +1,1 @@
+<img src="{{ asset('img/siparenta.png') }}" width="160"  >
