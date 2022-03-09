@@ -21,6 +21,7 @@ class User extends Authenticatable
         'nip_lama',
         'nip_baru',
         'name',
+        'level',
         'email',
         'password',
     ];

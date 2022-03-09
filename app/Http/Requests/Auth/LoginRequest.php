@@ -26,10 +26,11 @@ class LoginRequest extends FormRequest
      *
      * @return array
      */
+    
     public function rules()
     {
         return [
-            'email' => ['required', 'string', 'email'],
+            'email' => ['required', 'string'],
             'password' => ['required', 'string'],
         ];
     }
@@ -41,11 +42,14 @@ class LoginRequest extends FormRequest
      *
      * @throws \Illuminate\Validation\ValidationException
      */
+    public $dm = '@bps.go.id';
     public function authenticate()
-    {
+    {   
+        
         $this->ensureIsNotRateLimited();
-
-        if (! Auth::attempt($this->only('email', 'password'), $this->boolean('remember'))) {
+        
+        if (! Auth::attempt($this->only('email', 'password') , $this->boolean('remember'))) {
+            $this['email'] = $this->email.$this->dm;
             RateLimiter::hit($this->throttleKey());
 
             throw ValidationException::withMessages([
@@ -86,6 +90,7 @@ class LoginRequest extends FormRequest
      *
      * @return string
      */
+   
     public function throttleKey()
     {
         return Str::lower($this->input('email')).'|'.$this->ip();
