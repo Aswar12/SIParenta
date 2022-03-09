@@ -1,4 +1,4 @@
-<x-app-layout title="Dashboard">
+<x-app-layout title="Tambah Kegiatan">
    <section>
             <div id="main" class="main-content  bg-gray-100 pb-24 md:pb-5">
 
