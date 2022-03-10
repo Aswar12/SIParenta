@@ -28,7 +28,7 @@ class AuthenticatedSessionController extends Controller
      */
     public $dm = '@bps.go.id';
 
-   
+
     public function store(LoginRequest $request)
     {
         $request->authenticate();
@@ -53,5 +53,9 @@ class AuthenticatedSessionController extends Controller
         $request->session()->regenerateToken();
 
         return redirect('/');
+    }
+    public function username()
+    {
+        return 'username';
     }
 }

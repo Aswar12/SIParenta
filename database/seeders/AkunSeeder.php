@@ -18,6 +18,7 @@ class AkunSeeder extends Seeder
         $user = [
             [
                 'name' => 'Aswar Sumarlin',
+                'username' => 'aswar_sumarlin',
                 'email' => 'aswar@gmail.com',
                 'nip_lama' => '16.01.53.0012',
                 'nip_baru' => '123456789',
@@ -26,6 +27,7 @@ class AkunSeeder extends Seeder
             ],
             [
                 'name' => 'Rizki',
+                'username' => 'rizki',
                 'email' => 'aswar@bps.go.id',
                 'nip_lama' => '1123234',
                 'nip_baru' => '12345141',
@@ -34,6 +36,7 @@ class AkunSeeder extends Seeder
             ],
             [
                 'name' => 'ardi',
+                'username' => 'ardi',
                 'email' => 'ardi@bps.go.id',
                 'nip_lama' => '1123234',
                 'nip_baru' => '12345141',

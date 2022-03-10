@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('username')->unique();
             $table->enum('peran', ['Admin', 'Operator', 'Pegawai']);
             $table->string('nip_lama');
             $table->string('nip_baru');

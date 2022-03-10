@@ -5,7 +5,7 @@
                 <div class="md:mt-12 md:fixed md:left-0 md:top-0 content-center md:content-start text-left justify-between">
                     <ul class="list-reset flex flex-row md:flex-col pt-3 md:py-12 px-1  md:px-2 text-center md:text-left">
                        
-                        <li class="mr-3 flex-1 md:ml-3">
+                        <li class="mr-3 flex-1 md:px-3">
                             <a href="dashboard" class="block py-1 md:py-3 align-middle text-white hover:text-red-200  {{ ($title === 'Dashboard') ? ' border-b-2 border-red-200 hover:border-gray-800' : 'border-b-2 border-gray-800 hover:border-red-200' }}" >
                                 <i class="fa-solid fa-gauge pr-0 md:pr-3"></i><span
                                 class="pb-1 md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block
@@ -14,7 +14,7 @@
                             </a>
                         </li>
                         @if(Auth::user()->peran == 'Admin')
-                        <li class="mr-3 flex-1 md:ml-3">
+                        <li class="mr-3 flex-1 md:px-3">
                             <a href="tambah_kegiatan" class="block py-1 md:py-3 align-middle text-white hover:text-red-200 {{ ($title === 'Tambah Kegiatan') ? ' border-b-2 border-red-200 hover:border-gray-800' : 'border-b-2 border-gray-800 hover:border-red-200' }}">
                                 <i class="fa-solid fa-list pr-0 md:pr-3"></i><span
                                 class="pb-1 md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block
