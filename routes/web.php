@@ -29,8 +29,5 @@ Route::get('/profil', function () {
     return view('profil');
 })->middleware(['auth'])->name('profil');
 
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 require __DIR__.'/auth.php';

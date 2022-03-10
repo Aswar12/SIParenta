@@ -648,13 +648,10 @@ select {
 .my-24 {
   margin-top: 6rem;
   margin-bottom: 6rem;
-<<<<<<< Updated upstream
 }
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
-=======
->>>>>>> Stashed changes
 }
 .ml-3 {
   margin-left: 0.75rem;
@@ -1079,13 +1076,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(199 210 254 / var(--tw-bg-opacity));
 }
-<<<<<<< Updated upstream
 .bg-gray-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
-=======
->>>>>>> Stashed changes
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
@@ -1223,7 +1217,6 @@ select {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-<<<<<<< Updated upstream
 }
 .px-7 {
   padding-left: 1.75rem;
@@ -1232,8 +1225,6 @@ select {
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-=======
->>>>>>> Stashed changes
 }
 .pb-24 {
   padding-bottom: 6rem;
@@ -1280,15 +1271,12 @@ select {
 .pb-12 {
   padding-bottom: 3rem;
 }
-<<<<<<< Updated upstream
 .pb-6 {
   padding-bottom: 1.5rem;
 }
 .pb-4 {
   padding-bottom: 1rem;
 }
-=======
->>>>>>> Stashed changes
 .text-left {
   text-align: left;
 }
@@ -1568,17 +1556,12 @@ select {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 .hover\:bg-indigo-700:hover {
-<<<<<<< Updated upstream
   --tw-bg-opacity: 1;
   background-color: rgb(67 56 202 / var(--tw-bg-opacity));
 }
 .hover\:bg-gray-800:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
-=======
-  --tw-bg-opacity: 1;
-  background-color: rgb(67 56 202 / var(--tw-bg-opacity));
->>>>>>> Stashed changes
 }
 .hover\:font-semibold:hover {
   font-weight: 600;
