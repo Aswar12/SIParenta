@@ -25,4 +25,9 @@ Route::get('/tambah_kegiatan', function () {
     return view('tambah_kegiatan');
 })->middleware(['auth'])->name('tambah_kegiatan');
 
+Route::get('/profil', function () {
+    return view('profil');
+})->middleware(['auth'])->name('profil');
+
+
 require __DIR__.'/auth.php';
