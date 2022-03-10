@@ -15,13 +15,13 @@
                         <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg></button>
                     <div id="myDropdown" class="dropdownlist absolute bg-gray-800 text-white right-0 mt-3 p-3 overflow-auto z-30 invisible">
                         
-                        <form method="POST" action="{{ route('logout') }}">
+                        <form method="GET" action="{{ route('profil') }}">
                             @csrf
 
-                            <x-dropdown-link :href="route('logout')"
+                            <x-dropdown-link :href="route('profil')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                            <i class="fa-solid fa-circle-user"></i> {{ Auth::user()->peran }}
+                            <i class="fa-solid fa-circle-user"></i> Profil
                             </x-dropdown-link>
                             </form>
                        
