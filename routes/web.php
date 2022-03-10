@@ -25,6 +25,10 @@ Route::get('/tambah_kegiatan', function () {
     return view('tambah_kegiatan');
 })->middleware(['auth'])->name('tambah_kegiatan');
 
+Route::get('/tambah_operator', function () {
+    return view('tambah_operator');
+})->middleware(['auth'])->name('tambah_operator');
+
 Route::get('/profil', function () {
     return view('profil');
 })->middleware(['auth'])->name('profil');
