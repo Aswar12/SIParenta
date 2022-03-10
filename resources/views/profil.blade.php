@@ -1,16 +1,14 @@
 <x-app-layout title="profil">
-<div class="w-full relative mt-4 shadow-2xl rounded my-24 overflow-hidden">
+<div class="w-full flex rounded pt-8 overflow-hidden">
 
     <div class="grid grid-cols-12 bg-white ">
 
       <div class="col-span-12 w-full px-3 py-6 justify-center flex space-x-4 border-b border-solid md:space-x-0 md:space-y-4 md:flex-col md:col-span-2 md:justify-start ">
 
-        <a href="#" class="text-sm p-2 bg-indigo-900 text-white text-center rounded font-bold">Basic Information</a>
 
         <a href="#" class="pt-2 px-7">  <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" class="h-24 w-24 object-cover rounded-full">
-          </a>
+         </a>
 
-        <a href="#" class="text-sm p-2 bg-indigo-200 text-center rounded font-semibold hover:bg-indigo-700 hover:text-gray-200">Another Something</a>
 
       </div>
 
@@ -46,7 +44,6 @@
               <hr>
             </div>
 
-          </form>
         </div>
       </div>
 
