@@ -1,4 +1,4 @@
-<x-app-layout title="Tambah Kegiatan">
+<x-app-layout title="Tambah Operator">
     <section>
         <div id="main" class="main-content  bg-gray-100 pb-24 md:pb-5">
 

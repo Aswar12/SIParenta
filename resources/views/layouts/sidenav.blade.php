@@ -1,6 +1,7 @@
 <nav aria-label="alternative nav">
 
-    <div class="bg-gray-800 shadow-xl h-20 fixed bottom-0 md:relative md:h-full z-10 w-full md:w-48 content-center">
+    <div
+        class="bg-gray-800 shadow-xl h-20 fixed bottom-0  md:relative md:h-full   z-10 w-full md:w-48 md:p-3 content-center">
 
         <div class="md:mt-9 md:fixed md:left-0 md:top-0 content-center md:content-start text-left justify-between">
             <ul class="list-reset flex flex-row md:flex-col pt-2 md:py-8 px-1  md:px-2 text-center md:text-left">
