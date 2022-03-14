@@ -8,9 +8,9 @@
                     <h1 class="font-bold pl-2">Dashboard</h1>
                 </div>
             </div>
-            <div class="pt-10 grid grid-cols-2 h-screen ">
+            <div class="pt-10 w-full grid md:grid-cols-2 h-screen ">
 
-                <div class="flex flex-col  px-6">
+                <div class="flex flex-col   px-6">
                     <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
                         <div class="inline-block py-2 min-w-full sm:px-6 lg:px-8">
                             <div class="overflow-hidden shadow-md sm:rounded-lg">
@@ -18,12 +18,12 @@
                                     <thead class="bg-gray-50 dark:bg-gray-700">
                                         <tr>
                                             <th scope="col"
-                                                class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
-                                                Name
+                                                class="py-3 px-6 text-xs font-medium tracking-wider text-center text-gray-700 uppercase dark:text-gray-400">
+                                                Kegiatan
                                             </th>
                                             <th scope="col"
                                                 class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
-                                                Color
+                                                Angka Kredit
                                             </th>
 
                                         </tr>
@@ -72,7 +72,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col px-6">
-                    <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                    <div class="overflow-x-auto sm:-mx-6 lg:mx-8">
                         <div class="inline-block py-2 min-w-full sm:px-6 lg:px-8">
                             <div class="overflow-hidden shadow-md sm:rounded-lg">
                                 <table class="min-w-full">
@@ -177,10 +177,6 @@
                 </div>
 
             </div>
-
-
-
-
         </div>
 
 

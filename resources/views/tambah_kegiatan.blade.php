@@ -8,6 +8,7 @@
                 </div>
             </div>
 
+<<<<<<< Updated upstream
             <div class="full">
                 <div class="w-full md:w-full p-6">
                     <!--Tambah Kegiatan-->
@@ -114,6 +115,16 @@
                                             </tr>
                                         </tbody>
                                     </table>
+=======
+            <div class="grid grid-flow-row-dense grid-cols-1 grid-rows-3">
+                <div class="w-full md:w-1/2 xl:w-1/3 p-6">
+                    <!--Metric Card-->
+                    <div
+                        class="bg-gradient-to-b from-green-200 to-green-100 border-b-4 border-green-600 rounded-lg shadow-xl p-5">
+                        <div class="flex flex-row items-center">
+                            <div class="flex-shrink pr-4">
+                                <div class="rounded-full p-5 bg-green-600"><i class="fa fa-wallet fa-2x fa-inverse"></i>
+>>>>>>> Stashed changes
                                 </div>
                             </div>
                         </div>
