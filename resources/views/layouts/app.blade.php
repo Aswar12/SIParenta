@@ -1,46 +1,50 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ $title }} | {{ config('app.name', 'Laravel') }}</title>
-        <link rel ="icon" href ="{{ asset('img/siparenta.ico') }}"  type = "image/x-icon">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-        <!-- Styles -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
-        <!-- Scripts -->
-        <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <!--Totally optional :) -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
-        <script src="https://kit.fontawesome.com/8785f89138.js" crossorigin="anonymous"></script>
-       
-    </head>
-     
-  
-    <body class="bg-gray-200 font-sans leading-normal tracking-normal mt-12">
-        <header>
-            @include('layouts.navigation')
-        </header> 
-<main>        
+    <title>{{ $title }} | {{ config('app.name', 'Laravel') }}</title>
+    <link rel="icon" href="{{ asset('img/siparenta.ico') }}" type="image/x-icon">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <!--Totally optional :) -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://kit.fontawesome.com/8785f89138.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"
+        integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+
+</head>
+
+
+<body class="bg-gray-200 font-sans leading-normal tracking-normal mt-12">
+    <header>
+        @include('layouts.navigation')
+    </header>
+    <main>
         <div class="flex flex-col md:flex-row ">
-           @include('layouts.sidenav')
+            @include('layouts.sidenav')
             {{ $slot }}
         </div>
-          
-        
-    
-                
-           
-</main>         
-            <script>
-                /*Toggle dropdown list*/
+
+
+
+
+
+    </main>
+
+    <!-- jQuery -->
+
+    <script>
+        /*Toggle dropdown list*/
                 function toggleDD(myDropMenu) {
                     document.getElementById(myDropMenu).classList.toggle("invisible");
                 }
@@ -71,7 +75,8 @@
                         }
                     }
                 }
-            </script>
-        <script src="{{ asset('js/scrpt.js') }}" defer></script>
-    </body>
+    </script>
+    <script src="{{ asset('js/scrpt.js') }}" defer></script>
+</body>
+
 </html>

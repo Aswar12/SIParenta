@@ -19,6 +19,12 @@ module.exports = {
             fontFamily: {
                 sans: ['inter', ...defaultTheme.fontFamily.sans],
             },
+            spacing: {
+                '128': '32rem',
+              },
+              width: {
+                '128': '32rem',
+              }
         },
     },
 
