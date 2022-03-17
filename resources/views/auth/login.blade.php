@@ -67,7 +67,7 @@
                 </div>
             </div>
         </form>
-        <div class="block text-center d-xl-inline-block text-sm pt-4 ">
+        <div class="block text-center d-xl-inline-block text-sm pt-8 mt-4 ">
 
             <a class="text-align text-center text-gray-700 hover:text-blue-900" href="https://sulsel.bps.go.id"
                 target="_blank">&copy; Badan Pusat Statistik Provinsi Sulawesi Selatan</a>

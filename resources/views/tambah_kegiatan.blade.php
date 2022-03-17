@@ -1,134 +1,153 @@
 <x-app-layout title="Tambah Kegiatan">
     <section>
-        <div id="main" class="w-relative main-content  bg-gray-100 pb-24">
+        <div id="main"
+            class="main-content md:pl-52 bg-gray-100 absolute inset-x-0 bottom-0 h-screen w-screen md:pb-5 overflow-hidden">
 
-            <div class="bg-gray-800 pt-3">
-                <div class="w-full rounded-tl-3xl bg-gradient-to-r from-blue-900 to-gray-800 p-4 shadow text-2xl text-white">
+            <div class="bg-gray-800 pt-16">
+                <div
+                    class="rounded-tl-2xl bg-gradient-to-r from-gray-800 to-blue-900 p-2  px-4 shadow text-xl text-white">
                     <h1 class="font-bold pl-2">Tambah Kegiatan</h1>
                 </div>
             </div>
-
-<<<<<<< Updated upstream
-            <div class="full">
-                <div class="w-full md:w-full p-6">
-                    <!--Tambah Kegiatan-->
-                    <div class="flex">
-                        <div class="overflow-x-auto shadow-md sm:rounded-lg">
-                            <div class="inline-block min-w-full align-middle">
-                                <div class="overflow-hidden ">
-                                    <table class="min-w-full divide-y divide-gray-200 table-auto dark:divide-gray-700">
-                                        <thead class="bg-gray-100 dark:bg-gray-700">
-                                            <tr>
-                                                <th scope="col"
-                                                    class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
-                                                   Nama Kegiatan
-                                                </th>
-                                                <th scope="col"
-                                                    class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
-                                                   Satuan
-                                                </th>
-                                                <th scope="col"
-                                                    class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
-                                                   Angka Kredit
-                                                </th>
-                                                <th scope="col" class="p-4">
-                                                    <span class="sr-only">Edit</span>
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody
-                                            class="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
-                                            <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
-                                                <td
-                                                    class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                    Lorem ipsum dolor sit</td>
-                                                <td
-                                                    class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">
-                                                    Lorem ipsum dolor</td>
-                                                <td
-                                                    class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                    0.2</td>
-                                                <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                                    <a href="#"
-                                                        class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                                                </td>
-                                            </tr>
-                                            <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
-                                                <td
-                                                    class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                    Apple MacBook Pro 17"</td>
-                                                <td
-                                                    class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">
-                                                    Laptop</td>
-                                                <td
-                                                    class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                    $2999</td>
-                                                <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                                    <a href="#"
-                                                        class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                                                </td>
-                                            </tr>
-                                            <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
-                                                <td
-                                                    class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                    iPhone 13 Pro</td>
-                                                <td
-                                                    class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">
-                                                    Phone</td>
-                                                <td
-                                                    class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                    $999</td>
-                                                <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                                    <a href="#"
-                                                        class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                                                </td>
-                                            </tr>
-                                            <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
-                                                <td
-                                                    class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                    Apple Magic Mouse 2</td>
-                                                <td
-                                                    class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">
-                                                    Accessories</td>
-                                                <td
-                                                    class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                    $99</td>
-                                                <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                                    <a href="#"
-                                                        class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                                                </td>
-                                            </tr>
-                                            <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
-                                                <td
-                                                    class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                    Apple Watch Series 7</td>
-                                                <td
-                                                    class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">
-                                                    Accessories</td>
-                                                <td
-                                                    class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                    $599</td>
-                                                <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                                    <a href="#"
-                                                        class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-=======
-            <div class="grid grid-flow-row-dense grid-cols-1 grid-rows-3">
-                <div class="w-full md:w-1/2 xl:w-1/3 p-6">
+            <div class="flex flex-wrap pb-20 md:pb-0 md:mx-6 md:pt-20 ">
+                <div class="w-full  xl:w-1/2 px-6  pt-6">
                     <!--Metric Card-->
-                    <div
-                        class="bg-gradient-to-b from-green-200 to-green-100 border-b-4 border-green-600 rounded-lg shadow-xl p-5">
-                        <div class="flex flex-row items-center">
-                            <div class="flex-shrink pr-4">
-                                <div class="rounded-full p-5 bg-green-600"><i class="fa fa-wallet fa-2x fa-inverse"></i>
->>>>>>> Stashed changes
-                                </div>
+                    <div class="w-full max-w-2xl mx-auto bg-white shadow-lg rounded-sm border border-gray-200 flex-col">
+                        <header class="px-5 py-4 border-b border-gray-100">
+                            <h2 class="font-semibold text-center text-gray-800">5 Pegawai Angka Kredit
+                                Tertinggi/Terendah </h2>
+                        </header>
+                        <div class="p-3">
+                            <div class="overflow-x-auto  flex-row flex-no-wrap ">
+                                <table class="table-auto w-full flex-col ">
+                                    <thead class="text-xs font-semibold uppercase text-gray-500 bg-gray-100">
+                                        <tr class="flex-col flex-no wrap">
+                                            <th class="p-2 whitespace-nowrap flex-col ">
+                                                <div class="font-semibold text-left">Name</div>
+                                            </th>
+                                            <th class="p-2 whitespace-nowrap">
+                                                <div class="font-semibold text-left">Email</div>
+                                            </th>
+                                            <th class="p-2 whitespace-nowrap">
+                                                <div class="font-semibold text-left">Spent</div>
+                                            </th>
+                                            <th class="p-2 whitespace-nowrap">
+                                                <div class="font-semibold text-center">Country</div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-sm divide-y divide-gray-100 ">
+                                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-00 flex-col flex-no wrap">
+                                            <td class="p-2 whitespace-nowrap">
+                                                <div class="flex items-center">
+                                                    <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img
+                                                            class="rounded-full"
+                                                            src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-05.jpg"
+                                                            width="40" height="40" alt="Alex Shatov"></div>
+                                                    <div class="font-medium text-gray-800">Alex Shatov</div>
+                                                </div>
+                                            </td>
+                                            <td class="p-2 whitespace-nowrap">
+                                                <div class="text-left">alexshatov@gmail.com</div>
+                                            </td>
+                                            <td class="p-2 whitespace-nowrap">
+                                                <div class="text-left font-medium text-green-500">$2,890.66</div>
+                                            </td>
+                                            <td class="p-2 whitespace-nowrap">
+                                                <div class="text-lg text-center">🇺🇸</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-00">
+                                            <td class="p-2 whitespace-nowrap">
+                                                <div class="flex items-center">
+                                                    <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img
+                                                            class="rounded-full"
+                                                            src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-06.jpg"
+                                                            width="40" height="40" alt="Philip Harbach"></div>
+                                                    <div class="font-medium text-gray-800">Philip Harbach</div>
+                                                </div>
+                                            </td>
+                                            <td class="p-2 whitespace-nowrap">
+                                                <div class="text-left">philip.h@gmail.com</div>
+                                            </td>
+                                            <td class="p-2 whitespace-nowrap">
+                                                <div class="text-left font-medium text-green-500">$2,767.04</div>
+                                            </td>
+                                            <td class="p-2 whitespace-nowrap">
+                                                <div class="text-lg text-center">🇩🇪</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-00">
+                                            <td class="p-2 whitespace-nowrap">
+                                                <div class="flex items-center">
+                                                    <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img
+                                                            class="rounded-full"
+                                                            src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-07.jpg"
+                                                            width="40" height="40" alt="Mirko Fisuk"></div>
+                                                    <div class="font-medium text-gray-800">Mirko Fisuk</div>
+                                                </div>
+                                            </td>
+                                            <td class="p-2 whitespace-nowrap">
+                                                <div class="text-left">mirkofisuk@gmail.com</div>
+                                            </td>
+                                            <td class="p-2 whitespace-nowrap">
+                                                <div class="text-left font-medium text-green-500">$2,996.00</div>
+                                            </td>
+                                            <td class="p-2 whitespace-nowrap">
+                                                <div class="text-lg text-center">🇫🇷</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-00">
+                                            <td class="p-2 whitespace-nowrap">
+                                                <div class="flex items-center">
+                                                    <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img
+                                                            class="rounded-full"
+                                                            src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-08.jpg"
+                                                            width="40" height="40" alt="Olga Semklo"></div>
+                                                    <div class="font-medium text-gray-800">Olga Semklo</div>
+                                                </div>
+                                            </td>
+                                            <td class="p-2 whitespace-nowrap">
+                                                <div class="text-left">olga.s@cool.design</div>
+                                            </td>
+                                            <td class="p-2 whitespace-nowrap">
+                                                <div class="text-left font-medium text-green-500">$1,220.66</div>
+                                            </td>
+                                            <td class="p-2 whitespace-nowrap">
+                                                <div class="text-lg text-center">🇮🇹</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-00">
+                                            <td class="p-2 whitespace-nowrap">
+                                                <div class="flex items-center">
+                                                    <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img
+                                                            class="rounded-full"
+                                                            src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-09.jpg"
+                                                            width="40" height="40" alt="Burak Long"></div>
+                                                    <div class="font-medium text-gray-800">Burak Long</div>
+                                                </div>
+                                            </td>
+                                            <td class="p-2 whitespace-nowrap">
+                                                <div class="text-left">longburak@gmail.com</div>
+                                            </td>
+                                            <td class="p-2 whitespace-nowrap">
+                                                <div class="text-left font-medium text-green-500">$1,890.66</div>
+                                            </td>
+                                            <td class="p-2 whitespace-nowrap">
+                                                <div class="text-lg text-center">🇬🇧</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                     <!--/Metric Card-->
+                </div>
+
+
+
+
+            </div>
     </section>
 </x-app-layout>

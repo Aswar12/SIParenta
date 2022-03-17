@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('kegiatan', function (Blueprint $table) {
             $table->id();
+            $table->string('nama_kegiatan');
+            $table->string('satuan_kegiatan');
+            $table->string('vol_kegiatan');
+            $table->foreignId('id_butir');
             $table->timestamps();
         });
     }

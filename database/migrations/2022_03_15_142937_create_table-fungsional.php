@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('butir', function (Blueprint $table) {
+        Schema::create('fungsional', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_butir');
-            $table->string('satuan_butir');
-            $table->bigInteger('angka_kredit');
-            $table->foreignId('id_fungsional');
+            $table->string('tingkat');
+            $table->string('jenis');
+            $table->string('grade');
+            $table->string('nama_fungsional');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('butir');
+        //
     }
 };

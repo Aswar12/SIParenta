@@ -24,6 +24,7 @@ class User extends Authenticatable
         'name',
         'level',
         'email',
+        'id_fungsional',
         'password',
     ];
 

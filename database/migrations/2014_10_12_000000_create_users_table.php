@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('nip_lama');
             $table->string('nip_baru');
             $table->string('email')->unique();
+            $table->foreignId('id_fungsional')->autoIncrement();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

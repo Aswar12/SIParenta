@@ -1,4 +1,5 @@
-<nav aria-label="menu nav" class="bg-gray-800 pt-2 md:pt-1 pb-1 px-1 mt-0 h-auto fixed w-full z-20 top-0">
+<nav aria-label="menu nav"
+    class="bg-gray-800 pt-2 md:pt-1 pb-1 px-1 mt-0 h-auto fixed md:absolute md:left-0 w-screen z-20 top-0">
 
     <div class="px-3 pt-2 flex flex-inline items-center justify-between">
         <div class="inline-flex md:w-1/3 justify-center md:justify-start text-white">
@@ -6,7 +7,7 @@
                 <img class="place-items-center" src="{{ asset('img/siparenta.png') }}">
 
             </a>
-            <span class="p-2">SIParenta</span>
+            <span class="p-2 font-bold tracking-wide text-xl">SIParenta</span>
         </div>
 
         <div class="flex flex-1 justify-end text-white px-1">

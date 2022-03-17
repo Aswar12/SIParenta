@@ -21,6 +21,9 @@
     <script src="https://kit.fontawesome.com/8785f89138.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"
         integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('DataTables/datatables.min.css') }}" />
+    <script type="text/javascript" src="{{ asset('DataTables/datatables.min.js') }}"></script>
+
 
 </head>
 
@@ -77,6 +80,20 @@
                 }
     </script>
     <script src="{{ asset('js/scrpt.js') }}" defer></script>
+
+    <script>
+        $(document).ready( function () {
+    $('#tabelbps').DataTable({
+        paging: false,
+    });
+        } );
+    </script>
+    <script>
+        $(document).ready( function () {
+    $('#tabelbps2').DataTable();
+        } );
+    </script>
+
 </body>
 
 </html>

@@ -23,6 +23,7 @@ class AkunSeeder extends Seeder
                 'nip_lama' => '16.01.53.0012',
                 'nip_baru' => '123456789',
                 'peran' => 'Admin',
+                'id_fungsional' => '1',
                 'password' => bcrypt('aswar123'),
             ],
             [
@@ -32,6 +33,7 @@ class AkunSeeder extends Seeder
                 'nip_lama' => '1123234',
                 'nip_baru' => '12345141',
                 'peran' => 'Operator',
+                'id_fungsional' => '2',
                 'password' => bcrypt('aswar123'),
             ],
             [
@@ -41,6 +43,7 @@ class AkunSeeder extends Seeder
                 'nip_lama' => '1123234',
                 'nip_baru' => '12345141',
                 'peran' => 'Pegawai',
+                'id_fungsional' => '3',
                 'password' => bcrypt('aswar123'),
             ],
         ];
