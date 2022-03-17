@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama_kegiatan');
             $table->string('satuan_kegiatan');
-            $table->string('vol_kegiatan');
+            $table->integer('vol_kegiatan');
             $table->foreignId('id_butir');
             $table->timestamps();
         });

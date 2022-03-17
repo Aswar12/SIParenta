@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class kegiatan extends Model
 {
     use HasFactory;
+    protected $table = 'kegiatan';
 
     protected $fillable = [
         ''
@@ -24,6 +25,6 @@ class kegiatan extends Model
     }
 
     public function user() {
-        return $this->belongsTo()
+        return $this->belongsTo();
     }
 }

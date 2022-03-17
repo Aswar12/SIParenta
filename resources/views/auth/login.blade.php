@@ -72,8 +72,9 @@
             <a class="text-align text-center text-gray-700 hover:text-blue-900" href="https://sulsel.bps.go.id"
                 target="_blank">&copy; Badan Pusat Statistik Provinsi Sulawesi Selatan</a>
             <hr>
-
-            2022. All rights reserved.
+            <div class="text-xs">
+                Developed by <span class="text-blue-700">KKLP STMIK AKBA</span>. 2022.
+            </div>
 
         </div>
 

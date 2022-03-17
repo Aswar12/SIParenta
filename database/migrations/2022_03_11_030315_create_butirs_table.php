@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama_butir');
             $table->string('satuan_butir');
-            $table->bigInteger('angka_kredit');
+            $table->Integer('angka_kredit');
             $table->foreignId('id_fungsional');
             $table->timestamps();
         });
