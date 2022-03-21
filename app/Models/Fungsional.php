@@ -20,6 +20,6 @@ class Fungsional extends Model
         return $this->hasMany(Butir::class, 'id_fungsional', 'id');
     }
     public function user(){
-        return $this->belongsTo(User::class, 'id_fungsional', 'id');
+        return $this->hasMany(User::class, 'id_fungsional', 'id');
     }
 }

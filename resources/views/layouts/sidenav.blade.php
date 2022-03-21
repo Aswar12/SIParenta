@@ -9,16 +9,16 @@
 
                 <li class="mt-2 mr-1 flex-1 ">
                     <a href="dashboard"
-                        class="block md:py-3 align-middle text-white hover:text-red-200  {{ ($title === 'Dashboard') ? ' border-b-2 border-red-200 hover:border-gray-800' : 'border-b-2 border-gray-800 hover:border-red-200' }}">
+                        class="block md:py-3 align-middle text-white hover:text-blue-300  {{ ($title === 'Dashboard') ? ' border-b-2 text-blue-300 border-blue-300 hover:border-gray-800' : 'border-b-2 border-gray-800 hover:border-blue-300' }}">
                         <i class="fa-solid fa-gauge pr-0 md:pr-3"></i><span class=" md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block
                                 md:inline-block">Dashboard</span>
 
                     </a>
                 </li>
-                @if(Auth::user()->peran == 'Admin')
+                {{-- @if(Auth::user()->peran == 'Admin') --}}
                 <li class="mr-1 mt-2 flex-1 ">
                     <a href="tambah_kegiatan"
-                        class="block  md:py-3 align-middle text-white hover:text-red-200 {{ ($title === 'Tambah Kegiatan') ? ' border-b-2 border-red-200 hover:border-gray-800' : 'border-b-2 border-gray-800 hover:border-red-200' }}">
+                        class="block  md:py-3 align-middle text-white hover:text-blue-300 {{ ($title === 'Tambah Kegiatan') ? ' text-blue-300 border-b-2 border-blue-300 hover:border-gray-800' : 'border-b-2 border-gray-800 hover:border-blue-300' }}">
                         <i class="fa-solid fa-list pr-0 md:pr-3"></i><span class=" md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block
                                 md:inline-block">Tambah Kegiatan</span>
 
@@ -26,16 +26,16 @@
                 </li>
                 <li class="mr-1 mt-2 flex-1 ">
                     <a href="tambah_operator"
-                        class="block  md:py-3 align-middle text-white no-underline hover:text-red-200 {{ ($title === 'Tambah Operator') ? ' border-b-2 border-red-200 hover:border-gray-800' : 'border-b-2 border-gray-800 hover:border-red-200' }}">
+                        class="block  md:py-3 align-middle text-white no-underline hover:text-blue-300 {{ ($title === 'Tambah Operator') ? ' text-blue-300 border-b-2 border-blue-300 hover:border-gray-800' : 'border-b-2 border-gray-800 hover:border-blue-300' }}">
                         <i class="fa-solid fa-person pr-0 md:pr-3 "></i><span
                             class=" md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block md:inline-block">Tambah
                             Operator</span>
                     </a>
                 </li>
-                @elseif(Auth::user()->peran == 'Operator')
+                {{-- @elseif(Auth::user()->peran == 'Operator') --}}
                 <li class="mr-1 mt-2 flex-1 ">
                     <a href="#"
-                        class="block  md:py-3 align-middle text-white no-underline hover:text-red-200 {{ ($title === 'Tambah Kegiatan') ? ' border-b-2 border-red-200 hover:border-gray-800' : 'border-b-2 border-gray-800 hover:border-red-200' }}">
+                        class="block  md:py-3 align-middle text-white no-underline hover:text-blue-300 {{ ($title === 'Tambah Kegiatan') ? 'text-blue-300 border-b-2 border-blue-300 hover:border-gray-800' : 'border-b-2 border-gray-800 hover:border-blue-300' }}">
                         <i class="fa-solid fa-clipboard-list pr-0 md:pr-3"></i>
                         <span class=" md:pb-0 text-xs md:text-base text-white md:text-white block md:inline-block">Beri
                             Kegiatan</span>
@@ -43,17 +43,17 @@
                 </li>
                 <li class="mr-1 mt-2 flex-1 ">
                     <a href="#"
-                        class="block  md:py-3 pl-0  align-middle text-white no-underline hover:text-red-200 {{ ($title === 'Tambah Kegiatan') ? ' border-b-2 border-red-200 hover:border-gray-800' : 'border-b-2 border-gray-800 hover:border-red-200' }}">
+                        class="block  md:py-3 pl-0  align-middle text-white no-underline hover:text-blue-300 {{ ($title === 'Tambah Kegiatan') ? 'text-blue-300 border-b-2 border-blue-300 hover:border-gray-800' : 'border-b-2 border-gray-800 hover:border-blue-300' }}">
                         <i class="fa-solid fa-address-book pr-0 md:pr-3"></i>
                         <span
                             class=" md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block md:inline-block">Daftar
                             Pegawai</span>
                     </a>
                 </li>
-                @elseif(Auth::user()->peran == 'Pegawai')
+                {{-- @elseif(Auth::user()->peran == 'Pegawai') --}}
                 <li class="mr-1 mt-2 flex-1 ">
                     <a href="#"
-                        class="block  md:py-3 pl-0  align-middle text-white no-underline hover:text-red-200 {{ ($title === 'Tambah Kegiatan') ? ' border-b-2 border-red-200 hover:border-gray-800' : 'border-b-2 border-gray-800 hover:border-red-200' }}">
+                        class="block  md:py-3 pl-0  align-middle text-white no-underline hover:text-blue-300 {{ ($title === 'Tambah Kegiatan') ? 'text-blue-300 border-b-2 border-blue-300 hover:border-gray-800' : 'border-b-2 border-gray-800 hover:border-blue-300' }}">
                         <i class="fas fa-tasks pr-0 md:pr-3"></i>
                         <span
                             class=" md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block md:inline-block">Daftar
@@ -63,14 +63,14 @@
                 </li>
                 <li class="mr-1 mt-2 flex-1 ">
                     <a href="#"
-                        class="block  md:py-3 pl-0  align-middle text-white no-underline hover:text-red-200 {{ ($title === 'Tambah Kegiatan') ? ' border-b-2 border-red-200 hover:border-gray-800' : 'border-b-2 border-gray-800 hover:border-red-200' }}">
+                        class="block  md:py-3 pl-0  align-middle text-white no-underline hover:text-blue-300 {{ ($title === 'Tambah Kegiatan') ? 'text-blue-300 border-b-2 border-blue-300 hover:border-gray-800' : 'border-b-2 border-gray-800 hover:border-blue-300' }}">
                         <i class="fa-solid fa-star pr-0 md:pr-3"></i>
                         <span
                             class=" md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block md:inline-block">Angka
                             Kredit</span>
                     </a>
                 </li>
-                @endif
+                {{-- @endif --}}
             </ul>
         </div>
 

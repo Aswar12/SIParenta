@@ -24,7 +24,4 @@ class kegiatan extends Model
         return $this->hasMany(transaksi::class, 'id_kegiatan', 'id');
     }
 
-    public function user() {
-        return $this->belongsTo();
-    }
 }
