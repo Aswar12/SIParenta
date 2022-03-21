@@ -9,7 +9,7 @@
                 </div>
             </div>
             <div class="flex flex-wrap md:flex-nowrap pt-8 pb-20 md:pb-0 md:mx-3 justify-center md:pt-20">
-                <div class="w-full p-3">
+                <div class="w-full p-3 ml-12">
                     <!--Metric Card-->
                     <div class="flex flex-col max-w-2xl mx-auto bg-white shadow-lg rounded-xl border border-gray-200">
                         <div class="inline-block">
@@ -17,12 +17,15 @@
                                 <h2 class="font-semibold text-center text-gray-800">Daftar Kegiatan</h2>
                             </header>
                             <div class="p-3">
-                                <div class="overflow-x-auto flex-col">
-                                    <table class="table-auto w-full">
+                                <div class="overflow-x-auto min-w-full ">
+                                    <table class="table-auto w-full flex-col   ">
                                         <thead
-                                            class="text-xs font-semibold uppercase text-gray-500 bg-gray-100 rounded-lg overflow-hidden ">
+                                            class="text-xs justify-between font-semibold uppercase text-gray-500 bg-gray-100 rounded-lg overflow-hidden ">
                                             <tr class="text-center">
-                                                <th class="p-2 w-48 whitespace-nowrap">
+                                                <th class="w-10 whitespace-nowrap ">
+                                                    <div class="font-semibold text-center">No</div>
+                                                </th>
+                                                <th class="p-2 whitespace-nowrap">
                                                     <div class="font-semibold text-center">Kegiatan</div>
                                                 </th>
                                                 <th class="p-2 whitespace-nowrap">
@@ -40,7 +43,11 @@
                                             </tr>
                                         </thead>
                                         <tbody class="text-sm divide-y divide-gray-100 ">
+
                                             <tr class="hover:bg-gray-100 dark:hover:bg-gray-00">
+                                                <td class="p-2 whitespace-nowrap">
+                                                    <div class="text-lg text-center">🇺🇸</div>
+                                                </td>
                                                 <td class="p-2 whitespace-nowrap">
                                                     <div class="flex items-center">
                                                         <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img
@@ -62,6 +69,9 @@
                                             </tr>
                                             <tr class="hover:bg-gray-100 dark:hover:bg-gray-00">
                                                 <td class="p-2 whitespace-nowrap">
+                                                    <div class="text-lg text-center">🇺🇸</div>
+                                                </td>
+                                                <td class="p-2 whitespace-nowrap">
                                                     <div class="flex items-center">
                                                         <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img
                                                                 class="rounded-full"
@@ -81,6 +91,9 @@
                                                 </td>
                                             </tr>
                                             <tr class="hover:bg-gray-100 dark:hover:bg-gray-00">
+                                                <td class="p-2 whitespace-nowrap">
+                                                    <div class="text-lg text-center">🇺🇸</div>
+                                                </td>
                                                 <td class="p-2 whitespace-nowrap">
                                                     <div class="flex items-center">
                                                         <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img
@@ -102,6 +115,9 @@
                                             </tr>
                                             <tr class="hover:bg-gray-100 dark:hover:bg-gray-00">
                                                 <td class="p-2 whitespace-nowrap">
+                                                    <div class="text-lg text-center">🇺🇸</div>
+                                                </td>
+                                                <td class="p-2 whitespace-nowrap">
                                                     <div class="flex items-center">
                                                         <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img
                                                                 class="rounded-full"
@@ -121,6 +137,9 @@
                                                 </td>
                                             </tr>
                                             <tr class="hover:bg-gray-100 dark:hover:bg-gray-00">
+                                                <td class="p-2 whitespace-nowrap">
+                                                    <div class="text-lg text-center">🇺🇸</div>
+                                                </td>
                                                 <td class="p-2 whitespace-nowrap">
                                                     <div class="flex items-center">
                                                         <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img

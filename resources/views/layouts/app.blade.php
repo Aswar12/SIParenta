@@ -23,7 +23,7 @@
         integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="{{ asset('DataTables/datatables.min.css') }}" />
     <script type="text/javascript" src="{{ asset('DataTables/datatables.min.js') }}"></script>
-
+    @livewireStyles
 
 </head>
 
@@ -93,7 +93,7 @@
     $('#tabelbps2').DataTable();
         } );
     </script>
-
+    @livewireScripts
 </body>
 
 </html>
