@@ -18,7 +18,7 @@
             <div class="w-full py-2 left-0 overflow-hidden">
                 <!--Metric Card-->
                 <div class="pl-0   overflow-hidden" id="button">
-                    <button wire:click="AddKegiatan"
+                    <button wire:click="OpenModal"
                         class=" relative inline-flex justify-between  p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-600 to-blue-500 group-hover:from-cyan-600 group-hover:to-blue-500 hover:text-white">
                         <span
                             class="relative font-semibold  px-3 text-gray-700 py-2 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0">

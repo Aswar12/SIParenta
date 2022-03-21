@@ -10,4 +10,14 @@ class Show extends Component
     {
         return view('livewire.operator.show');
     }
+    public $openmodal=0;
+    public function OpenModal()
+    {
+        $this->openmodal=1;
+       
+    }
+    public function closemodal()
+    {
+        $this->openmodal=0;
+    }
 }

@@ -15,7 +15,7 @@ class Show extends Component
 
 
     public $openmodal=0;
-    public function AddKegiatan()
+    public function OpenModal()
     {
         $this->openmodal=1;
        
