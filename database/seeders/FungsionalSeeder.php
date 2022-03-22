@@ -16,10 +16,10 @@ class FungsionalSeeder extends Seeder
     {
         $fungsional = [
             [
-                'Tingkat' => 'input maps',
+                'Tingkat' => 'Statistisi',
                 'jenis' => 'document',
-                'grade' => '10',
-                'nama' => '1',
+                'grade' => 'tinggi',
+                'nama' => 'saddg',
                 
             ],
             [  

@@ -10,8 +10,6 @@
         @if($openmodal===1)
         @include('livewire.kegiatan.add')
         @endif
-
-
         <div
             class="flex overflow-hidden md:px-8 flex-wrap md:flex-nowrap pt-8 pb-20 md:pb-0 mx-2 md:mx-10 justify-center md:pt-10">
 
@@ -34,130 +32,57 @@
                             <h2 class="font-semibold text-center text-gray-800">Kegiatan</h2>
                         </header>
                         <div class="overflow-x-auto shadow-md flex-col">
-                            <table class="table-auto min-w-full">
+                            <table class="table-auto w-full flex-col   ">
                                 <thead
-                                    class="text-xs font-semibold uppercase text-gray-500 bg-gray-100 rounded-lg overflow-hidden ">
+                                    class="text-xs justify-between font-semibold uppercase text-gray-500 bg-gray-100 rounded-lg overflow-hidden ">
                                     <tr class="text-center">
-                                        <th class="p-2 w-48 whitespace-nowrap">
+                                        <th class="w-10 whitespace-nowrap ">
+                                            <div class="font-semibold text-center">No</div>
+                                        </th>
+                                        <th class="p-2 whitespace-nowrap">
                                             <div class="font-semibold text-center">Kegiatan</div>
                                         </th>
-                                        <th class="p-2 w-64 whitespace-nowrap">
+                                        <th class="p-2 whitespace-nowrap">
                                             <div class="font-semibold text-center">Fungsional</div>
                                         </th>
-                                        <th class="p-2 w-80 whitespace-nowrap">
+                                        <th class="p-2 whitespace-nowrap">
+                                            <div class="font-semibold text-center">Satuan</div>
+                                        </th>
+                                        <th class="p-2 whitespace-nowrap">
                                             <div class="font-semibold text-center">Volume</div>
                                         </th>
-                                        <th class="p-2 w-80 whitespace-nowrap">
+                                        <th class="p-2 whitespace-nowrap">
                                             <div class="font-semibold text-center">Angka Kredit</div>
                                         </th>
                                     </tr>
                                 </thead>
                                 <tbody class="text-sm divide-y divide-gray-100 ">
+                                    <?php $no=0; ?>
+                                    @foreach ($kegiatan as $kegiatan )
+                                    <?php $no++; ?>
                                     <tr class="hover:bg-gray-100 dark:hover:bg-gray-00">
                                         <td class="p-2 whitespace-nowrap">
-                                            <div class="flex items-center">
-                                                <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img
-                                                        class="rounded-full"
-                                                        src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-05.jpg"
-                                                        width="40" height="40" alt="Alex Shatov"></div>
-                                                <div class="font-medium text-gray-800">Alex Shatov</div>
+                                            <div class="text-center text-sm">{{ $no }}</div>
+                                        </td>
+                                        <td class="p-2 whitespace-nowrap">
+                                            <div class="text-center">{{ $kegiatan->nama_kegiatan }}</div>
+                                        </td>
+                                        <td class="p-2 whitespace-nowrap">
+                                            <div class="text-center">{{ $kegiatan->nama_fungsional }}</div>
+                                        </td>
+                                        <td class="p-2 whitespace-nowrap">
+                                            <div class="text-center  ">{{ $kegiatan->satuan_kegiatan }}
                                             </div>
                                         </td>
                                         <td class="p-2 whitespace-nowrap">
-                                            <div class="text-left">alexshatov@gmail.com</div>
-                                        </td>
-                                        <td class="p-2 whitespace-nowrap">
-                                            <div class="text-left font-medium text-green-500">$2,890.66
+                                            <div class="text-center  ">{{ $kegiatan->vol_kegiatan }}
                                             </div>
                                         </td>
                                         <td class="p-2 whitespace-nowrap">
-                                            <div class="text-lg text-center">🇺🇸</div>
+                                            <div class="text-sm text-center">{{ $kegiatan->angka_kredit }}</div>
                                         </td>
                                     </tr>
-                                    <tr class="hover:bg-gray-100 dark:hover:bg-gray-00">
-                                        <td class="p-2 whitespace-nowrap">
-                                            <div class="flex items-center">
-                                                <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img
-                                                        class="rounded-full"
-                                                        src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-06.jpg"
-                                                        width="40" height="40" alt="Philip Harbach"></div>
-                                                <div class="font-medium text-gray-800">Philip Harbach</div>
-                                            </div>
-                                        </td>
-                                        <td class="p-2 whitespace-nowrap">
-                                            <div class="text-left">philip.h@gmail.com</div>
-                                        </td>
-                                        <td class="p-2 whitespace-nowrap">
-                                            <div class="text-left font-medium text-green-500">$2,767.04
-                                            </div>
-                                        </td>
-                                        <td class="p-2 whitespace-nowrap">
-                                            <div class="text-lg text-center">🇩🇪</div>
-                                        </td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-100 dark:hover:bg-gray-00">
-                                        <td class="p-2 whitespace-nowrap">
-                                            <div class="flex items-center">
-                                                <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img
-                                                        class="rounded-full"
-                                                        src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-07.jpg"
-                                                        width="40" height="40" alt="Mirko Fisuk"></div>
-                                                <div class="font-medium text-gray-800">Mirko Fisuk</div>
-                                            </div>
-                                        </td>
-                                        <td class="p-2 whitespace-nowrap">
-                                            <div class="text-left">mirkofisuk@gmail.com</div>
-                                        </td>
-                                        <td class="p-2 whitespace-nowrap">
-                                            <div class="text-left font-medium text-green-500">$2,996.00
-                                            </div>
-                                        </td>
-                                        <td class="p-2 whitespace-nowrap">
-                                            <div class="text-lg text-center">🇫🇷</div>
-                                        </td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-100 dark:hover:bg-gray-00">
-                                        <td class="p-2 whitespace-nowrap">
-                                            <div class="flex items-center">
-                                                <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img
-                                                        class="rounded-full"
-                                                        src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-08.jpg"
-                                                        width="40" height="40" alt="Olga Semklo"></div>
-                                                <div class="font-medium text-gray-800">Olga Semklo</div>
-                                            </div>
-                                        </td>
-                                        <td class="p-2 whitespace-nowrap">
-                                            <div class="text-left">olga.s@cool.design</div>
-                                        </td>
-                                        <td class="p-2 whitespace-nowrap">
-                                            <div class="text-left font-medium text-green-500">$1,220.66
-                                            </div>
-                                        </td>
-                                        <td class="p-2 whitespace-nowrap">
-                                            <div class="text-lg text-center">🇮🇹</div>
-                                        </td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-100 dark:hover:bg-gray-00">
-                                        <td class="p-2 whitespace-nowrap">
-                                            <div class="flex items-center">
-                                                <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img
-                                                        class="rounded-full"
-                                                        src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-09.jpg"
-                                                        width="40" height="40" alt="Burak Long"></div>
-                                                <div class="font-medium text-gray-800">Burak Long</div>
-                                            </div>
-                                        </td>
-                                        <td class="p-2 whitespace-nowrap">
-                                            <div class="text-left">longburak@gmail.com</div>
-                                        </td>
-                                        <td class="p-2 whitespace-nowrap">
-                                            <div class="text-left font-medium text-green-500">$1,890.66
-                                            </div>
-                                        </td>
-                                        <td class="p-2 whitespace-nowrap">
-                                            <div class="text-lg text-center">🇬🇧</div>
-                                        </td>
-                                    </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

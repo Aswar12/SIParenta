@@ -1,7 +1,7 @@
 <div>
     <div>
         <dh-component>
-            <div class=" bg-gray-100 bg-opacity-60 transition duration-150 ease-in-out   absolute inset-y-0 left-4 mt-21 w-screen h-screen md:w-full md:h-full "
+            <div class=" bg-gray-800 bg-opacity-20 transition duration-150 ease-in-out   absolute inset-y-0 left-4 mt-21 w-screen h-screen md:w-full md:h-full "
                 id="modal" wire:model="add_operator">
                 <div role="alert" class="container mx-auto w-128 md:w-2/3 max-w-lg">
                     <div class="relative py-8 px-5 md:px-10 bg-white shadow-md rounded border border-gray-400">
