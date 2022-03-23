@@ -1,38 +1,25 @@
 <div>
     <dh-component>
-        <div class=" bg-gray-800 bg-opacity-20 transition duration-150 ease-in-out   absolute inset-y-0 left-0 mt-20  w-screen h-screen md:w-full md:h-full "
+        <div class=" bg-gray-600 bg-opacity-20 transition duration-350 ease-in-out   fixed inset-y-0 left-0 mt-14  w-screen h-screen md:w-full md:h-full "
             id="modal" wire:model="add_operator">
-            <div role="alert" class="container mx-auto w-128 md:w-2/3 max-w-lg">
-                <div class="relative py-8 px-5 md:px-10 bg-white shadow-md rounded border border-gray-400">
+            <div role="alert" class="container mx-auto w-full h-full md:w-2/3 max-w-lg">
+                <div class="relative py-4 px-5 md:px-10 bg-white shadow-md rounded border border-gray-400">
                     <div class="w-full flex justify-start text-gray-600 mb-3">
 
                     </div>
                     <h1 class="text-gray-800 font-lg font-bold tracking-normal text-center leading-tight mb-4">Masukkan
-                        Detail
-                        Kegiatan</h1>
-                    <label for="name" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">Owner
-                        Name</label>
-                    <input id="name"
-                        class="mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"
-                        placeholder="James" />
-                    <label for="email2" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">Card
-                        Number</label>
-                    <div class="relative mb-5 mt-2">
-                        <div class="absolute text-gray-600 flex items-center px-4 border-r h-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-credit-card"
-                                width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" />
-                                <rect x="3" y="5" width="18" height="14" rx="3" />
-                                <line x1="3" y1="10" x2="21" y2="10" />
-                                <line x1="7" y1="15" x2="7.01" y2="15" />
-                                <line x1="11" y1="15" x2="13" y2="15" />
-                            </svg>
-                        </div>
-                        <input id="email2"
-                            class="text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-16 text-sm border-gray-300 rounded border"
-                            placeholder="XXXX - XXXX - XXXX - XXXX" />
-                    </div>
+                        Detail Kegiatan </h1>
+                    <label for="nama kegiatan" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">
+                        Nama kegiatan</label>
+                    <input id="nama kegiatan"
+                        class="mb-4 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"
+                        placeholder="masukkan nama kegiatan" />
+                    <label for="fungsional" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">
+                        fungsional</label>
+                    <input id="fungsional"
+                        class="mb-4 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"
+                        placeholder="pilih fungsional" />
+
                     <label for="expiry" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">Expiry
                         Date</label>
                     <div class="relative mb-5 mt-2">

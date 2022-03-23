@@ -8,7 +8,7 @@
             </div>
         </div>
         <div class="flex flex-wrap md:flex-nowrap pt-8 pb-20 md:pb-0 md:mx-3 justify-center md:pt-20">
-            <div class="w-full p-3 ml-12">
+            <div class="w-full p-3">
                 <!--Metric Card-->
                 <div class="flex flex-col max-w-2xl mx-auto bg-white shadow-lg rounded-xl border border-gray-200">
                     <div class="inline-block">
