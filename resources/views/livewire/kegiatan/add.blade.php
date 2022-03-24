@@ -1,25 +1,30 @@
 <div>
     <dh-component>
         <div class=" bg-gray-600 bg-opacity-20 transition duration-350 ease-in-out   fixed inset-y-0 left-0 mt-14  w-screen h-screen md:w-full md:h-full "
-            id="modal" wire:model="add_operator">
+            id="modal">
             <div role="alert" class="container mx-auto w-full h-full md:w-2/3 max-w-lg">
                 <div class="relative py-4 px-5 md:px-10 bg-white shadow-md rounded border border-gray-400">
                     <div class="w-full flex justify-start text-gray-600 mb-3">
 
                     </div>
+
                     <h1 class="text-gray-800 font-lg font-bold tracking-normal text-center leading-tight mb-4">Masukkan
                         Detail Kegiatan </h1>
                     <label for="nama kegiatan" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">
                         Nama kegiatan</label>
-                    <input id="nama kegiatan"
+                    <input id="nama kegiatan" wire:model.debounce.500ms="nama_kegiatan" name="nama_kegiatan" type="text"
                         class="mb-4 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"
                         placeholder="masukkan nama kegiatan" />
                     <label for="fungsional" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">
                         fungsional</label>
-                    <input id="fungsional"
+                    <input id="fungsional" wire:model="nama_fungsional" name="nama_fungsional"
                         class="mb-4 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"
                         placeholder="pilih fungsional" />
-
+                    <label for="fungsional" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">
+                        fungsional</label>
+                    <input id="fungsional" wire:model="nama_fungsional"
+                        class="mb-4 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"
+                        placeholder="pilih fungsional" />
                     <label for="expiry" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">Expiry
                         Date</label>
                     <div class="relative mb-5 mt-2">
@@ -79,37 +84,5 @@
         <div class="w-full flex justify-center" id="button">
 
         </div>
-        <script>
-            let modal = document.getElementById("modal");
-        function modalHandler(val) {
-            if (val) {
-                fadeIn(modal);
-            } else {
-                fadeOut(modal);
-            }
-        }
-        function fadeOut(el) {
-            el.style.opacity = 1;
-            (function fade() {
-                if ((el.style.opacity -= 0.1) < 0) {
-                    el.style.display = "none";
-                } else {
-                    requestAnimationFrame(fade);
-                }
-            })();
-        }
-        function fadeIn(el, display) {
-            el.style.opacity = 0;
-            el.style.display = display || "flex";
-            (function fade() {
-                let val = parseFloat(el.style.opacity);
-                if (!((val += 0.2) > 1)) {
-                    el.style.opacity = val;
-                    requestAnimationFrame(fade);
-                }
-            })();
-        }
-        </script>
-
     </dh-component>
 </div>

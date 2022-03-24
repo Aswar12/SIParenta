@@ -22,8 +22,8 @@ Route::get('/', function () {
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware(['auth']);
 
 
-Route::get('/tambah_kegiatan', function () {
-    return view('tambah_kegiatan',);
+Route::get('/tambah_kegiatan',function () {
+    return view('tambah_kegiatan',) ;
 })->middleware(['auth'])->name('tambah_kegiatan');
 
 Route::get('/tambah_operator', function () {

@@ -54,8 +54,5 @@ class AuthenticatedSessionController extends Controller
 
         return redirect('/');
     }
-    public function username()
-    {
-        return 'username';
-    }
+    
 }
