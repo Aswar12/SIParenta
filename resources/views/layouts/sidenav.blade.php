@@ -29,7 +29,7 @@
                         class="block  md:py-3 align-middle text-white no-underline hover:text-blue-300 {{ ($title === 'Tambah Operator') ? ' text-blue-300 border-b-2 border-blue-300 hover:border-gray-800' : 'border-b-2 border-gray-800 hover:border-blue-300' }}">
                         <i class="fa-solid fa-person pr-0 md:pr-3 "></i><span
                             class=" md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block md:inline-block">Tambah
-                            Operator</span>
+                            Pegawai</span>
                     </a>
                 </li>
                 {{-- @elseif(Auth::user()->peran == 'Operator') --}}

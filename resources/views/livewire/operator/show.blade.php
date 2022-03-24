@@ -1,23 +1,12 @@
 <div>
-    <div id="main"
-        class="main-content md:pl-52 bg-gray-100 relative  md:absolute md:inset-x-0 md:bottom-0 h-screen md:w-screen md:pb-5 overflow-hidden">
 
-        <div class="bg-gray-800 md:pt-14 pt-6">
-            <div class="rounded-tl-2xl bg-gradient-to-r from-blue-800 to-gray-900   px-4 shadow text-xl text-white">
-                <h1 class="font-bold   pl-2">Operator</h1>
-            </div>
-        </div>
-        @if ($openmodal === 1)
-            @include('livewire.operator.add')
-        @endif
-        <div>
             <div id="main"
                 class="main-content md:pl-52 bg-gray-100 relative  md:absolute md:inset-x-0 md:bottom-0 h-screen md:w-screen md:pb-5 overflow-hidden">
 
                 <div class="bg-gray-800 md:pt-14 pt-6">
                     <div
                         class="rounded-tl-2xl bg-gradient-to-r from-blue-800 to-gray-900   px-4 shadow text-xl text-white">
-                        <h1 class="font-bold   pl-2">Tambah Operator</h1>
+                        <h1 class="font-bold   pl-2">Tambah Pegawai</h1>
                     </div>
                 </div>
                 @if ($openmodal === 1)
@@ -65,7 +54,7 @@
                                                 <th class="p-2 whitespace-nowrap">
                                                     <div class="font-semibold text-center">fungsional</div>
                                                 </th>
-                                                <th class="p-2 whitespace-nowrap">
+                                                <th class="p-2 whitespace-nowrap w-10">
                                                     <div class="font-semibold text-center">Aksi</div>
                                                 </th>
                                             </tr>
@@ -88,7 +77,7 @@
                                                         <div class="text-center  ">{{ $pegawai->nama_fungsional }}
                                                         </div>
                                                     </td>
-                                                    <td class="inline-flex whitespace-nowrap place-items-center">
+                                                    <td class="inline-flex whitespace-nowrap place-items-center pr-4 pt-2">
                                                         <button
                                                         class="inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-blue-500 to-blue-700 group-hover:from-blue-500  hover:text-white dark:text-gray-800 focus:ring-2 focus:outline-none focus:ring-blue-200">
                                                             <span
