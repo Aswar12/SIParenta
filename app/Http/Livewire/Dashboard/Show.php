@@ -10,16 +10,30 @@ use App\Models\Butir;
 use App\Models\Fungsional;
 use Illuminate\Contracts\Database\Query\Builder;
 use Illuminate\Support\Facades\DB;
+use Livewire\WithPagination;
 
 class Show extends Component
 {
+    public $paginate = 5;
+    use WithPagination;
+    public $Kegiatan,  $butir, $cari, $search;
+
+    
     public function render()
-    {   
-        $this->kegiatan = Kegiatan::join('butir', 'kegiatan.id_butir', '=', 'butir.id')->join('fungsional', 'fungsional.id', '=', 'Butir.id_fungsional')->get();
-        $this->pegawai = User::join('transaksi', 'transaksi.id_user', '=', 'users.id')
-        ->join('kegiatan', 'kegiatan.id', '=', 'transaksi.id_kegiatan')
-        ->join('butir', 'butir.id', '=', 'kegiatan.id_butir')
-        ->join('fungsional', 'fungsional.id', '=', 'Butir.id_fungsional')->get();
-        return view('livewire.dashboard.show');
+    {    
+        $pegawais = User::with('fungsional')->get();
+
+        $cari = $this->search;
+        $kegiatans = $this->search == null ? 
+        Kegiatan::with(['butir', 'butir.fungsional'])->paginate($this->paginate) : 
+        Kegiatan::with(['butir', 'butir.fungsional'])->where('nama_kegiatan', 'like', '%'. $this->search .'%')
+        ->orWhere(function($query) use ($cari) {
+            $query->whereHas('butir.fungsional', function($query) use ($cari) {
+                $query->where('nama_fungsional', 'like', '%'. $cari. '%');
+            });
+        })->paginate($this->paginate);
+
+        // dd($kegiatans);
+       return view('livewire.dashboard.show',['kegiatans' => $kegiatans, 'pegawais' => $pegawais]);
     }
 }

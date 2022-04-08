@@ -1,4 +1,4 @@
-<x-app-layout title="Tambah Kegiatan">
+<x-app-layout title="Kegiatan">
     <section>
         <!-- Code block starts -->
 

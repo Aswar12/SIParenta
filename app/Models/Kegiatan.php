@@ -11,7 +11,7 @@ class kegiatan extends Model
     protected $table = 'kegiatan';
 
     protected $fillable = [
-        ''
+       'id_butir', 'nama_kegiatan', 'satuan_kegiatan', 'vol_kegiatan'
     ];
 
     public function butir()

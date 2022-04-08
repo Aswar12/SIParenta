@@ -1,9 +1,9 @@
-<x-app-layout title="Beri Kegiatan">
+<x-app-layout title="Pegawai">
     <section>
         <!-- Code block starts -->
 
         <!-- Code block ends -->
-        @livewire('berikegiatan.show', )
+        @livewire('pegawai.show', )
 
     </section>
 </x-app-layout>

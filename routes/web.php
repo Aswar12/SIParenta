@@ -22,17 +22,20 @@ Route::get('/', function () {
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware(['auth']);
 
 
-Route::get('/tambah_kegiatan',function () {
-    return view('tambah_kegiatan',) ;
-})->middleware(['auth'])->name('tambah_kegiatan');
+Route::get('/kegiatan',function () {
+    return view('kegiatan',) ;
+})->middleware(['auth'])->name('kegiatan');
 
-Route::get('/tambah_operator', function () {
-    return view('tambah_operator');
-})->middleware(['auth'])->name('tambah_operator');
+Route::get('/pegawai', function () {
+    return view('pegawai');
+})->middleware(['auth'])->name('pegawai');
 
 Route::get('/profil', function () {
     return view('profil');
 })->middleware(['auth'])->name('profil');
 
+Route::get('beri_kegiatan', function () {
+    return view('beri_kegiatan');
+})->middleware(['auth'])->name('beri_kegiatan');
 
 require __DIR__.'/auth.php';

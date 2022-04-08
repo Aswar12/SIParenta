@@ -23,6 +23,7 @@
     "dependencies": {
         "data-table": "^2.0.0",
         "datatables.net": "^1.11.5",
-        "datatables.net-dt": "^1.11.5"
+        "datatables.net-dt": "^1.11.5",
+        "sweetalert2": "^11.4.8"
     }
 }

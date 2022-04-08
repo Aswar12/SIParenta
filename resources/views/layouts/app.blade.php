@@ -17,12 +17,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <!--Totally optional :) -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="https://kit.fontawesome.com/8785f89138.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"
-        integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="{{ asset('DataTables/datatables.min.css') }}" />
-    <script type="text/javascript" src="{{ asset('DataTables/datatables.min.js') }}"></script>
+
+
     @livewireStyles
 
 </head>
@@ -80,18 +76,43 @@
                 }
     </script>
     <script src="{{ asset('js/scrpt.js') }}" defer></script>
-
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://kit.fontawesome.com/8785f89138.js" crossorigin="anonymous"></script>
     <script>
-        $(document).ready( function () {
-    $('#tabelbps').DataTable({
-        paging: false,
-    });
-        } );
-    </script>
-    <script>
-        $(document).ready( function () {
-    $('#tabelbps2').DataTable();
-        } );
+        window.addEventListener('save', event => {
+            Swal.fire({
+               
+                title: event.detail.title,
+                icon: event.detail.icon,
+                text: event.detail.text,
+                position: 'top-right',
+                toast: true,
+                showConfirmButton: false,
+                timer: 3000,
+            })
+        });
+        window.addEventListener('confirmDelete', event => {
+            Swal.fire({
+                        title: event.detail.title,
+                        text: event.detail.text,
+                        icon: event.detail.icon,
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        dangerMode: true,
+                        confirmButtonText: 'Ya, Hapus!'
+                        }).then((result) => {
+                        if (result.isConfirmed) {
+                           window.livewire.emit('delete', event.detail.id);
+                           Swal.fire(
+                            'Deleted!',
+                            'Your file has been deleted.', 
+                            'success'
+                           )
+                        }
+                        })
+        });
     </script>
     @livewireScripts
 </body>
