@@ -1,8 +1,7 @@
-<x-app-layout title="Tambah Operator">
+<x-app-layout title="Angka Kredit">
     <section>
         <!-- Code block starts -->
-
+        @livewire('angkakredit.show',)
         <!-- Code block ends -->
-        @livewire('operator.show', )
     </section>
 </x-app-layout>

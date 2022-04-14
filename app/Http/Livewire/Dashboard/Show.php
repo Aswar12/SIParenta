@@ -16,7 +16,7 @@ class Show extends Component
 {
     public $paginate = 5;
     use WithPagination;
-    public $Kegiatan,  $butir, $cari, $search;
+    public $Kegiatan,  $butir, $cari, $search, $cari_pegawai;
 
     
     public function render()
@@ -32,6 +32,9 @@ class Show extends Component
                 $query->where('nama_fungsional', 'like', '%'. $cari. '%');
             });
         })->paginate($this->paginate);
+        $pegawais = $this->cari_pegawai == null ?
+        User::with(['fungsional','transaksi','transaksi.kegiatan','transaksi.kegiatan.butir'])->paginate($this->paginate):
+        User::with(['fungsional','transaksi','transaksi.kegiatan','transaksi.kegiatan.butir'])->where('name', 'like', '%'. $this->cari_pegawai .'%')->paginate($this->paginate);
 
         // dd($kegiatans);
        return view('livewire.dashboard.show',['kegiatans' => $kegiatans, 'pegawais' => $pegawais]);

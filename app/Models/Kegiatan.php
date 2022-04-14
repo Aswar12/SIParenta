@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class kegiatan extends Model
+class Kegiatan extends Model
 {
     use HasFactory;
     protected $table = 'kegiatan';
@@ -16,12 +16,12 @@ class kegiatan extends Model
 
     public function butir()
     {
-        return $this->belongsTo(butir::class, 'id_butir', 'id');
+        return $this->belongsTo(Butir::class, 'id_butir', 'id');
     }
 
     public function transaksi()
     {
-        return $this->hasMany(transaksi::class, 'id_kegiatan', 'id');
+        return $this->hasMany(Transaksi::class, 'id_kegiatan', 'id');
     }
 
 }

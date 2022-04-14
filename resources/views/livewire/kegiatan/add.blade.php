@@ -38,7 +38,6 @@
                                 @endforeach
                             </select>
                             @endif
-
                         </div>
                         <label for="satuan_kegiatan"
                             class="text-gray-800 text-sm font-bold leading-tight tracking-normal">

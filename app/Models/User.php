@@ -46,12 +46,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function Transaksi()
+    public function transaksi()
     {
-        return $this->hasMany(Transaksi::class, 'id_pegawai', 'id');
+        return $this->hasMany(Transaksi::class, 'id_user', 'id');
     }
 
-    public function Fungsional()
+    public function fungsional()
     {
         return $this->belongsTo(Fungsional::class, 'id_fungsional', 'id');
     }

@@ -42,8 +42,8 @@
                     </a>
                 </li>
                 <li class="mr-1 mt-2 flex-1 ">
-                    <a href="#"
-                        class="block  md:py-3 pl-0  align-middle text-white no-underline hover:text-blue-300 {{ ($title === 'Tambah Kegiatan') ? 'text-blue-300 border-b-2 border-blue-300 hover:border-gray-800' : 'border-b-2 border-gray-800 hover:border-blue-300' }}">
+                    <a href="daftar_pegawai"
+                        class="block  md:py-3 pl-0  align-middle text-white no-underline hover:text-blue-300 {{ ($title === 'Daftar Pegawai') ? 'text-blue-300 border-b-2 border-blue-300 hover:border-gray-800' : 'border-b-2 border-gray-800 hover:border-blue-300' }}">
                         <i class="fa-solid fa-address-book pr-0 md:pr-3"></i>
                         <span
                             class=" md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block md:inline-block">Daftar
@@ -52,29 +52,16 @@
                 </li>
                 {{-- @elseif(Auth::user()->peran == 'Pegawai') --}}
                 <li class="mr-1 mt-2 flex-1 ">
-                    <a href="#"
-                        class="block  md:py-3 pl-0  align-middle text-white no-underline hover:text-blue-300 {{ ($title === 'Tambah Kegiatan') ? 'text-blue-300 border-b-2 border-blue-300 hover:border-gray-800' : 'border-b-2 border-gray-800 hover:border-blue-300' }}">
+                    <a href="daftar_kegiatan"
+                        class="block  md:py-3 pl-0  align-middle text-white no-underline hover:text-blue-300 {{ ($title === 'Daftar Kegiatan') ? 'text-blue-300 border-b-2 border-blue-300 hover:border-gray-800' : 'border-b-2 border-gray-800 hover:border-blue-300' }}">
                         <i class="fas fa-tasks pr-0 md:pr-3"></i>
                         <span
                             class=" md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block md:inline-block">Daftar
                             Kegiatan</span>
                     </a> </a>
                 </li>
-                </li>
-                <li class="mr-1 mt-2 flex-1 ">
-                    <a href="#"
-                        class="block  md:py-3 pl-0  align-middle text-white no-underline hover:text-blue-300 {{ ($title === 'Tambah Kegiatan') ? 'text-blue-300 border-b-2 border-blue-300 hover:border-gray-800' : 'border-b-2 border-gray-800 hover:border-blue-300' }}">
-                        <i class="fa-solid fa-star pr-0 md:pr-3"></i>
-                        <span
-                            class=" md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block md:inline-block">Angka
-                            Kredit</span>
-                    </a>
-                </li>
                 {{-- @endif --}}
             </ul>
         </div>
-
-
     </div>
-
 </nav>

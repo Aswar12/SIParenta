@@ -1,15 +1,13 @@
 <?php
 
-namespace App\Http\Livewire\Berikegiatan;
+namespace App\Http\Livewire\Daftarpegawai;
 
-use Livewire\Component;
-use Livewire\WithPagination;
-use App\Models\butir;
-use App\Models\User;
 use App\Models\Fungsional;
 use App\Models\Kegiatan;
 use App\Models\Transaksi;
-use phpDocumentor\Reflection\Types\This;
+use App\Models\User;
+use Livewire\Component;
+use Livewire\WithPagination;
 
 class Show extends Component
 {
@@ -44,7 +42,7 @@ class Show extends Component
         User::with(['fungsional','transaksi','transaksi.kegiatan','transaksi.kegiatan.butir'])->paginate($this->paginate):
         User::with(['fungsional','transaksi','transaksi.kegiatan','transaksi.kegiatan.butir'])->where('name', 'like', '%'. $this->cari_pegawai .'%')->orWhere('nip', 'like', '%'. $this->cari_pegawai .'%')->paginate($this->paginate);
         // User::where('name', 'like', '%'. $this->search .'%')->orWhere('email', 'like', '%'. $this->search .'%')->orWhere('username', 'like', '%'.$this->search.'%')->paginate($this->paginate);
-        return view('livewire.berikegiatan.show',['data' => $data, 'pegawais' => $pegawais, 'kegiatans' => $kegiatans, ]);
+        return view('livewire.daftarpegawai.show',['data' => $data, 'pegawais' => $pegawais, 'kegiatans' => $kegiatans, ]);
     }
     public function OpenModal()
     {
@@ -133,5 +131,4 @@ class Show extends Component
         $pegawai->delete();
        
     }
-    
 }

@@ -63,7 +63,8 @@ class Show extends Component
             'nip' => 'required',
 
             ]);
-
+         
+        
         $user = User::where('id', $this->pegawaiId)->first();
         if (!$user) {
             $user = new User();    

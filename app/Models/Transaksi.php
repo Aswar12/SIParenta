@@ -22,7 +22,7 @@ class Transaksi extends Model
         return $this->belongsTo(Kegiatan::class, 'id_kegiatan', 'id');
     }
 
-    public function User(){
-        return $this->belongsTo(User::class, 'id_pegawai', 'id');
+    public function user(){
+        return $this->belongsTo(User::class, 'id_user', 'id');
     }
 }
