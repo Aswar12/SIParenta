@@ -11,29 +11,29 @@
                     <h1 class="text-gray-800 font-lg font-bold tracking-normal text-center leading-tight ">Masukkan
                         Detail Kegiatan </h1>
                     <form>
-                        <label for="nama kegiatan"
+                        <label for="Nama Kegiatan"
                             class="text-gray-800 text-sm font-bold leading-tight tracking-normal">
-                            Pegawai</label>
+                            Nama Kegiatan </label>
                         <div class="relative">
-                            <input id="nama kegiatan" wire:model="nama_pegawai" name="nama_pegawai" type="text"
-                                class=" mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"
-                                placeholder="Pilih Pegawai" />
+                            <input id="nama kegiatan" wire:model="nama_kegiatan" name="nama_pegawai" type="text"
+                                class=" mt-1 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"
+                                placeholder="" />
                             @error('nama_kegiatan') <span class="text-red-600 text-xs">{{ $message }}</span>@enderror
                         </div>
                         <label for="nama kegiatan"
                             class="text-gray-800 text-sm font-bold leading-tight tracking-normal">
-                            Pilih Kegiatan Pegawai</label>
-                        <div class="relative mb-4">
-                            <input id="butir" wire:model.debounce.100ms="search" name="butir" type="text"
+                            Pilih Pegawai</label>
+                        <div class="relative mb-4">{{ $pegawaiId }}
+                            <input id="butir" wire:model.debounce.100ms="cari_pegawai" name="cari_pegawai" type="text"
                                 class="  text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"
-                                placeholder="Pilih Kegiatan Yang Akan Diberikan" />
-                            @error('search') <span class="text-red-600 text-xs">{{ $message }}</span>@enderror
-                            @if(!$search=="")
-                            <select id="butir" wire:model.debounce.100ms="kegiatanId" name="butir" type="text"
+                                placeholder="Pilih Pegawai Yang Akan Diberikan" />
+                            @error('cari_pegawai') <span class="text-red-600 text-xs">{{ $message }}</span>@enderror
+                            @if(!$cari_pegawai=="")
+                            <select id="butir" wire:model.debounce.100ms="pegawaiId" name="butir" type="text"
                                 class=" mt-1 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"
                                 placeholder="pilih fungsional">
                                 @foreach($data as $item)
-                                <option value="{{ $item->id }}">{{ $item->nama_kegiatan }}</option>
+                                <option value="{{ $item->id }}">{{ $item->name }}</option>
                                 @endforeach
                             </select>
                             @endif
@@ -47,7 +47,7 @@
                             @error('vol_kegiatan') <span class="text-red-600 text-xs">{{ $message }}</span>@enderror
                         </div>
                         <div class="flex items-center justify-start w-full">
-                            <button wire:click.prevent="simpan"
+                            <button wire:click.prevent="simpan()"
                                 class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 bg-indigo-800 rounded text-white px-8 py-2 text-sm">
                                 <i class="fa-solid fa-floppy-disk pl-1 text-md"></i> Simpan</button>
                             <button

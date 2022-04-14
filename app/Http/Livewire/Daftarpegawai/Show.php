@@ -37,7 +37,6 @@ class Show extends Component
         // $transaksi = $this->search == null ?
         // Transaksi::with(['user', 'user.fungsional', 'kegiatan', 'kegiatan.butir', 'butir.fungsional' ])->paginate($this->paginate);
         $data = Kegiatan::where('nama_kegiatan', 'like', '%'.$this->kegiatan_cari.'%')->orWhere('id', 'like', '%'.$this->kegiatan_cari.'%')->get();
-        
         $pegawais = $this->cari_pegawai == null ?
         User::with(['fungsional','transaksi','transaksi.kegiatan','transaksi.kegiatan.butir'])->paginate($this->paginate):
         User::with(['fungsional','transaksi','transaksi.kegiatan','transaksi.kegiatan.butir'])->where('name', 'like', '%'. $this->cari_pegawai .'%')->orWhere('nip', 'like', '%'. $this->cari_pegawai .'%')->paginate($this->paginate);
@@ -63,9 +62,7 @@ class Show extends Component
 
      public function simpan(){
         // dd($this);
-        $this->validate([
-            'nama_pegawai' => 'required',
-            'search' => 'required',
+        $this->validate([            
             'vol_transaksi' => 'required',
             ]);
         
@@ -107,13 +104,7 @@ class Show extends Component
         $useredit = User::findOrfail($postId);
         $this->nama_pegawai = $useredit->name; 
     }
-    public function storeKegiatan($kegiatId){
-        $this->kegiatanId = $kegiatId;
-        $this->OpenModal(); 
-        $kegiatedit = Kegiatan::findOrfail($kegiatId);
-        $this->search = $kegiatedit->nama_kegiatan; 
-    }
-
+    
     public function deleteConfirmation($id)
     {
         $pegawai = User::findOrFail($id);

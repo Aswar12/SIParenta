@@ -71,38 +71,41 @@
                                 </thead>
                                 <tbody class="text-sm divide-y divide-gray-100 ">
                                     @php $no=0; @endphp
-                                    @foreach ($kegiatans as $index => $kegiatan)
+                                    @foreach ($datakegiatan as $index => $item)
                                     @php
                                     $no++;
                                     @endphp
                                     <tr class="hover:bg-gray-100 dark:hover:bg-gray-00 py-2 ">
                                         <td class="p-2 whitespace-nowrap">
-                                            <div class="text-center text-sm">{{ $index + $kegiatans->firstItem() }}
+                                            <div class="text-center text-sm">{{ $index + $datakegiatan->firstItem() }}
                                             </div>
                                         </td>
                                         <td class="p-2 whitespace-nowrap">
-                                            <div class="text-center">{{ $kegiatan->nama_kegiatan }}</div>
+                                            <div class="text-center">{{ $item->kegiatan->nama_kegiatan }}</div>
                                         </td>
                                         <td class="p-2 whitespace-nowrap">
-                                            <div class="text-center">{{ $kegiatan->butir->fungsional->nama_fungsional }}
+                                            <div class="text-center">{{
+                                                $item->kegiatan->butir->fungsional->nama_fungsional }}
                                             </div>
                                         </td>
                                         <td class="p-2 whitespace-nowrap">
-                                            <div class="text-center  ">{{ $kegiatan->satuan_kegiatan }}
+                                            <div class="text-center  ">{{ $item->kegiatan->satuan_kegiatan }}
                                             </div>
                                         </td>
                                         <td class="p-2 whitespace-nowrap">
-                                            <div class="text-center  ">{{ $kegiatan->vol_kegiatan }}
+                                            <div class="text-center  ">{{ $item->kegiatan->vol_kegiatan }}
                                             </div>
                                         </td>
                                         <td class="p-2 whitespace-nowrap">
-                                            <div class="text-sm text-center">{{ $kegiatan->butir->angka_kredit }}</div>
+                                            <div class="text-sm text-center">{{ $item->kegiatan->butir->angka_kredit }}
+                                            </div>
                                         </td>
                                         <td class="p-2 whitespace-nowrap">
-                                            <div class="text-sm text-center">{{ $kegiatan->butir->angka_kredit }}</div>
+                                            <div class="text-sm text-center">{{ $item->kegiatan->butir->angka_kredit }}
+                                            </div>
                                         </td>
                                         <td class=" inline-flex  whitespace-nowrap pr-4 pt-2  ">
-                                            <button wire:click="edit({{ $kegiatan->id }})"
+                                            <button wire:click="edit({{ $item->id }})"
                                                 class="inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-blue-500 to-blue-700 group-hover:from-blue-500  hover:text-white dark:text-gray-800 focus:ring-2 focus:outline-none focus:ring-blue-200">
                                                 <span
                                                     class=" py-1 px-1 transition-all ease-in duration-75 bg-white  rounded-md group-hover:bg-opacity-0">
@@ -110,7 +113,7 @@
                                                         class="fa-solid fa-pen-to-square mr-1 text-gray-600 hover:text-white"></i>Edit
                                                 </span>
                                             </button>
-                                            <button wire:click="deleteConfirmation({{ $kegiatan->id }})"
+                                            <button wire:click="deleteConfirmation({{ $item->id }})"
                                                 class=" inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 to-pink-500 group-hover:from-red-500  hover:text-white dark:text-gray-800 focus:ring-2 focus:outline-none focus:ring-red-200">
                                                 <span
                                                     class=" py-1 px-1 transition-all ease-in duration-75 bg-white  rounded-md group-hover:bg-opacity-0">
@@ -124,7 +127,7 @@
                                 </tbody>
                             </table>
                             <div class="m-2 p-2">
-                                {{ $kegiatans->links('pagination::tailwind') }}
+                                {{ $datakegiatan->links('pagination::tailwind') }}
                             </div>
                         </div>
                     </div>

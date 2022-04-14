@@ -38,13 +38,8 @@ class Show extends Component
         })->paginate($this->paginate);
         // $transaksi = $this->search == null ?
         // Transaksi::with(['user', 'user.fungsional', 'kegiatan', 'kegiatan.butir', 'butir.fungsional' ])->paginate($this->paginate);
-        $data = Kegiatan::where('nama_kegiatan', 'like', '%'.$this->kegiatan_cari.'%')->orWhere('id', 'like', '%'.$this->kegiatan_cari.'%')->get();
-        
-        $pegawais = $this->cari_pegawai == null ?
-        User::with(['fungsional','transaksi','transaksi.kegiatan','transaksi.kegiatan.butir'])->paginate($this->paginate):
-        User::with(['fungsional','transaksi','transaksi.kegiatan','transaksi.kegiatan.butir'])->where('name', 'like', '%'. $this->cari_pegawai .'%')->orWhere('nip', 'like', '%'. $this->cari_pegawai .'%')->paginate($this->paginate);
-        // User::where('name', 'like', '%'. $this->search .'%')->orWhere('email', 'like', '%'. $this->search .'%')->orWhere('username', 'like', '%'.$this->search.'%')->paginate($this->paginate);
-        return view('livewire.berikegiatan.show',['data' => $data, 'pegawais' => $pegawais, 'kegiatans' => $kegiatans, ]);
+        $data = User::where('name', 'like', '%'.$this->cari_pegawai.'%')->orWhere('id', 'like', '%'.$this->cari_pegawai.'%')->get();
+        return view('livewire.berikegiatan.show',['data' => $data, 'kegiatans' => $kegiatans, ]);
     }
     public function OpenModal()
     {
@@ -59,18 +54,19 @@ class Show extends Component
 
         $this->nama_pegawai = '';
         $this->search = '';
+        $this->cari_pegawai = '';
         $this->vol_transaksi = '';
+        $this->nama_kegiatan = '';
       
      }
 
      public function simpan(){
         // dd($this);
         $this->validate([
-            'nama_pegawai' => 'required',
-            'search' => 'required',
+            
             'vol_transaksi' => 'required',
             ]);
-        
+            
             $transaksi = new Transaksi();
             $transaksi->id_user = $this->pegawaiId;
             $transaksi->id_kegiatan = $this->kegiatanId;
@@ -78,18 +74,6 @@ class Show extends Component
             $transaksi->status = $this->status;
             $transaksi->save();
             $this->freshinput();
-        // User::updateOrCreate(
-        //     ['id' => $this->pegawaiId],
-        //     [
-        //         'id_fungsional' => $this->fungsional_cari,
-        //         'name' => $this->nama_pegawai,
-        //         'username' => $this->username,
-        //         'email' => $this->email,
-        //         'nip' => $this->nip,
-        //         'peran' => $this->peran,
-        //         'password' => bcrypt('password'),
-        //     ]); 
-       
             $this->dispatchBrowserEvent('save',[
                 'title' => 'Berhasil',
                 'type' => 'success',
@@ -103,17 +87,13 @@ class Show extends Component
           //redirect
     
     }
-    public function edit($postId){
-        $this->pegawaiId = $postId;
+    public function edit($kegiatId){
+    
         $this->OpenModal(); 
-        $useredit = User::findOrfail($postId);
-        $this->nama_pegawai = $useredit->name; 
-    }
-    public function storeKegiatan($kegiatId){
-        $this->kegiatanId = $kegiatId;
-        $this->OpenModal(); 
+
         $kegiatedit = Kegiatan::findOrfail($kegiatId);
-        $this->search = $kegiatedit->nama_kegiatan; 
+        $this->nama_kegiatan = $kegiatedit->nama_kegiatan; 
+        $this->kegiatanId = $kegiatedit->id;
     }
 
     public function deleteConfirmation($id)

@@ -4,6 +4,8 @@ namespace App\Http\Livewire\Daftarkegiatan;
 
 use App\Models\Butir;
 use App\Models\Kegiatan;
+use App\Models\Transaksi;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -24,9 +26,9 @@ class Show extends Component
     {
         $data = Butir::where('nama_butir', 'like', '%'.$this->butir_cari.'%')->orWhere('id', 'like', '%'.$this->search.'%')->get();
         $cari = $this->search;
-        $kegiatans = $this->search == null ? 
-        Kegiatan::with(['butir', 'butir.fungsional'])->paginate($this->paginate) : 
-        Kegiatan::with(['butir', 'butir.fungsional'])->where('nama_kegiatan', 'like', '%'. $this->search .'%')
+        $datakegiatan = $this->search == null ? 
+        Transaksi::where('id_user', Auth::user()->id)->with(['kegiatan','kegiatan.butir', 'kegiatan.butir.fungsional'])->paginate($this->paginate):
+        Transaksi::where('id_user', Auth::user()->id)->with(['kegiatan', 'kegiatan.butir','kegiatan.butir.fungsional'])
         ->orWhere(function($query) use ($cari) {
             $query->whereHas('butir.fungsional', function($query) use ($cari) {
                 $query->where('nama_fungsional', 'like', '%'. $cari. '%');
@@ -34,6 +36,6 @@ class Show extends Component
         })->paginate($this->paginate);
 
         // dd($kegiatans);
-       return view('livewire.daftarkegiatan.show',['data' => $data, 'kegiatans' => $kegiatans]);
+       return view('livewire.daftarkegiatan.show',['data' => $data, 'datakegiatan' => $datakegiatan]);
     }
 }

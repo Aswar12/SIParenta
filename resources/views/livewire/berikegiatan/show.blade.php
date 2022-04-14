@@ -103,7 +103,7 @@
                                             <div class="text-sm text-center">{{ $kegiatan->butir->angka_kredit }}</div>
                                         </td>
                                         <td class="justify-items-center whitespace-nowrap  pt-2 my-2  ">
-                                            <button wire:click="storeKegiatan({{ $kegiatan->id }})"
+                                            <button wire:click="edit ({{ $kegiatan->id }})"
                                                 class="inline-flex  place-items-center p-0.5 mb-2 mr-2  overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-blue-500 to-blue-700 group-hover:from-blue-500  hover:text-white dark:text-gray-800 focus:ring-2 focus:outline-none focus:ring-blue-200">
                                                 <span
                                                     class=" py-1 px-1 transition-all ease-in duration-75 bg-white  rounded-md group-hover:bg-opacity-0">
